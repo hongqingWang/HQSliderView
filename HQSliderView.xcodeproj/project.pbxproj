@@ -14,6 +14,7 @@
 		183DE7901DDA18BB00E3F7D7 /* HQSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE78F1DDA18BB00E3F7D7 /* HQSliderView.m */; };
 		183DE7971DDA199900E3F7D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE7961DDA199900E3F7D7 /* ViewController.m */; };
 		183DE79A1DDA19A700E3F7D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE7991DDA19A700E3F7D7 /* AppDelegate.m */; };
+		183DE79E1DDA1C6A00E3F7D7 /* UIView+HQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE79D1DDA1C6A00E3F7D7 /* UIView+HQCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		183DE7961DDA199900E3F7D7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		183DE7981DDA19A700E3F7D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		183DE7991DDA19A700E3F7D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		183DE79C1DDA1C6A00E3F7D7 /* UIView+HQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HQCategory.h"; sourceTree = "<group>"; };
+		183DE79D1DDA1C6A00E3F7D7 /* UIView+HQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HQCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				183DE7931DDA195E00E3F7D7 /* Controllers */,
 				183DE7941DDA196C00E3F7D7 /* Others */,
 				183DE78D1DDA18BB00E3F7D7 /* HQSliderView */,
+				183DE79B1DDA1C6A00E3F7D7 /* UIView+HQCategory */,
 				183DE7761DDA167B00E3F7D7 /* Supporting Files */,
 			);
 			path = HQSliderView;
@@ -122,6 +126,15 @@
 				183DE7991DDA19A700E3F7D7 /* AppDelegate.m */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		183DE79B1DDA1C6A00E3F7D7 /* UIView+HQCategory */ = {
+			isa = PBXGroup;
+			children = (
+				183DE79C1DDA1C6A00E3F7D7 /* UIView+HQCategory.h */,
+				183DE79D1DDA1C6A00E3F7D7 /* UIView+HQCategory.m */,
+			);
+			path = "UIView+HQCategory";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183DE79E1DDA1C6A00E3F7D7 /* UIView+HQCategory.m in Sources */,
 				183DE79A1DDA19A700E3F7D7 /* AppDelegate.m in Sources */,
 				183DE7971DDA199900E3F7D7 /* ViewController.m in Sources */,
 				183DE7901DDA18BB00E3F7D7 /* HQSliderView.m in Sources */,

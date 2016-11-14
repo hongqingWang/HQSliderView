@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) UITableView *tableView;
+
 @end
 
 @implementation ViewController
@@ -18,14 +20,20 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor redColor];
-    NSLog(@"ceshi");
+    [self setupTopSliderView];
+    [self setupTableView];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 创建上部滑动View
+- (void)setupTopSliderView
+{
+    
 }
 
+#pragma mark - 创建TableView
+- (void)setupTableView
+{
+    
+}
 
 @end

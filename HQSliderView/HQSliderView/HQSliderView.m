@@ -7,6 +7,11 @@
 //
 
 #import "HQSliderView.h"
+#import "UIView+HQCategory.h"
+
+#pragma mark - 尺寸宏定义
+#define SCREEN_WIDTH      [UIScreen mainScreen].bounds.size.width
+
 
 @interface HQSliderView ()
 
@@ -30,7 +35,7 @@
         
         CGFloat x = 0;
         CGFloat y = 0;
-        CGFloat w = kScreenWidth;
+        CGFloat w = SCREEN_WIDTH;
         CGFloat h = 44;
         self.frame = CGRectMake(x, y, w, h);
         self.backgroundColor = [UIColor whiteColor];
@@ -41,7 +46,7 @@
 - (void)layoutSubviews
 {
     CGFloat y = 0;
-    CGFloat w = kScreenWidth / self.titleArray.count;
+    CGFloat w = SCREEN_WIDTH / self.titleArray.count;
     CGFloat h = self.h;
     
     self.sliderWidth = w;
@@ -54,8 +59,8 @@
         
         [button setTitle:self.titleArray[i] forState:UIControlStateNormal];
         
-        [button setTitleColor:HQTextColor forState:UIControlStateNormal];
-        [button setTitleColor:HQColor forState:UIControlStateSelected];
+        [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
         
         button.titleLabel.font = [UIFont systemFontOfSize:15.f];
         
@@ -72,7 +77,7 @@
     
         /** 创建分割线 */
         UIView *carve = [[UIView alloc] init];
-        carve.backgroundColor = HQLineColor;
+        carve.backgroundColor = [UIColor lightGrayColor];
         carve.frame = CGRectMake(w * (i + 1), 12, 1, 44 - (12 * 2));
         [self addSubview:carve];
     }
@@ -80,7 +85,7 @@
     /** 创建滑块 */
     UIView *sliderView = [[UIView alloc] init];
     self.sliderView = sliderView;
-    sliderView.backgroundColor = HQColor;
+    sliderView.backgroundColor = [UIColor redColor];
     
     /** 滑块高度 */
     CGFloat sliderHeight = 4.f;
@@ -90,14 +95,15 @@
     [self addSubview:sliderView];
     
     UIView *carve = [[UIView alloc] init];
-    carve.backgroundColor = HQLineColor;
+    carve.backgroundColor = [UIColor lightGrayColor];
+    carve.frame = CGRectMake(0, 44 - 1, SCREEN_WIDTH, 1);
     [self addSubview:carve];
-    [carve mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self);
-        make.bottom.equalTo(self);
-        make.right.equalTo(self);
-        make.height.mas_equalTo(1);
-    }];
+//    [carve mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self);
+//        make.bottom.equalTo(self);
+//        make.right.equalTo(self);
+//        make.height.mas_equalTo(1);
+//    }];
 }
 
 - (void)didClickMenuButton:(UIButton *)button
