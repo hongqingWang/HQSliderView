@@ -15,6 +15,7 @@
 		183DE7971DDA199900E3F7D7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE7961DDA199900E3F7D7 /* ViewController.m */; };
 		183DE79A1DDA19A700E3F7D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE7991DDA19A700E3F7D7 /* AppDelegate.m */; };
 		183DE79E1DDA1C6A00E3F7D7 /* UIView+HQCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE79D1DDA1C6A00E3F7D7 /* UIView+HQCategory.m */; };
+		183DE7A41DDA214700E3F7D7 /* HQTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DE7A31DDA214700E3F7D7 /* HQTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		183DE7991DDA19A700E3F7D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		183DE79C1DDA1C6A00E3F7D7 /* UIView+HQCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HQCategory.h"; sourceTree = "<group>"; };
 		183DE79D1DDA1C6A00E3F7D7 /* UIView+HQCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HQCategory.m"; sourceTree = "<group>"; };
+		183DE7A21DDA214700E3F7D7 /* HQTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQTableViewCell.h; sourceTree = "<group>"; };
+		183DE7A31DDA214700E3F7D7 /* HQTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 		183DE7921DDA195400E3F7D7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				183DE7A21DDA214700E3F7D7 /* HQTableViewCell.h */,
+				183DE7A31DDA214700E3F7D7 /* HQTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			files = (
 				183DE79E1DDA1C6A00E3F7D7 /* UIView+HQCategory.m in Sources */,
 				183DE79A1DDA19A700E3F7D7 /* AppDelegate.m in Sources */,
+				183DE7A41DDA214700E3F7D7 /* HQTableViewCell.m in Sources */,
 				183DE7971DDA199900E3F7D7 /* ViewController.m in Sources */,
 				183DE7901DDA18BB00E3F7D7 /* HQSliderView.m in Sources */,
 				183DE7781DDA167B00E3F7D7 /* main.m in Sources */,
@@ -367,6 +373,7 @@
 				183DE78C1DDA167B00E3F7D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

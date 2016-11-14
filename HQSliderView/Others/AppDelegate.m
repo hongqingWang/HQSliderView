@@ -21,6 +21,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     ViewController *vc = [[ViewController alloc] init];
+    vc.title = @"亦庄&吴彦祖";
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     
     self.window.rootViewController = nav;

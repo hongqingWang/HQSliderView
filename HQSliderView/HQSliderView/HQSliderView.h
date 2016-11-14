@@ -19,4 +19,7 @@
 
 @property (nonatomic, weak) id <HQSliderViewDelegate> delegate;
 
+/** 标题数组 */
+@property (nonatomic, strong) NSArray *titleArr;
+
 @end

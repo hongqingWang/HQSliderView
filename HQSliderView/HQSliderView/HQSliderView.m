@@ -9,14 +9,11 @@
 #import "HQSliderView.h"
 #import "UIView+HQCategory.h"
 
-#pragma mark - 尺寸宏定义
 #define SCREEN_WIDTH      [UIScreen mainScreen].bounds.size.width
 
 
 @interface HQSliderView ()
 
-/** 标题数组 */
-@property (nonatomic, strong) NSArray *titleArray;
 /** 滑块 */
 @property (nonatomic, weak) UIView *sliderView;
 /** 滑块宽度 */
@@ -28,40 +25,24 @@
 
 @implementation HQSliderView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-        CGFloat x = 0;
-        CGFloat y = 0;
-        CGFloat w = SCREEN_WIDTH;
-        CGFloat h = 44;
-        self.frame = CGRectMake(x, y, w, h);
-        self.backgroundColor = [UIColor whiteColor];
-    }
-    return self;
-}
 
 - (void)layoutSubviews
 {
     CGFloat y = 0;
-    CGFloat w = SCREEN_WIDTH / self.titleArray.count;
+    CGFloat w = SCREEN_WIDTH / self.titleArr.count;
     CGFloat h = self.h;
     
     self.sliderWidth = w;
     
-    for (int i = 0; i < self.titleArray.count; i++) {
+    for (int i = 0; i < self.titleArr.count; i++) {
         
         CGFloat x = w * i;
         
         UIButton *button = [[UIButton alloc] init];
         
-        [button setTitle:self.titleArray[i] forState:UIControlStateNormal];
-        
+        [button setTitle:self.titleArr[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-        
         button.titleLabel.font = [UIFont systemFontOfSize:15.f];
         
         button.frame = CGRectMake(x, y, w, h);
@@ -78,7 +59,7 @@
         /** 创建分割线 */
         UIView *carve = [[UIView alloc] init];
         carve.backgroundColor = [UIColor lightGrayColor];
-        carve.frame = CGRectMake(w * (i + 1), 12, 1, 44 - (12 * 2));
+        carve.frame = CGRectMake(w * (i + 1), 12, 1, h - (12 * 2));
         [self addSubview:carve];
     }
     
@@ -96,14 +77,8 @@
     
     UIView *carve = [[UIView alloc] init];
     carve.backgroundColor = [UIColor lightGrayColor];
-    carve.frame = CGRectMake(0, 44 - 1, SCREEN_WIDTH, 1);
+    carve.frame = CGRectMake(0, h - 1, SCREEN_WIDTH, 1);
     [self addSubview:carve];
-//    [carve mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.equalTo(self);
-//        make.bottom.equalTo(self);
-//        make.right.equalTo(self);
-//        make.height.mas_equalTo(1);
-//    }];
 }
 
 - (void)didClickMenuButton:(UIButton *)button
@@ -132,15 +107,6 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.sliderView.x = button.tag * self.sliderWidth;
     }];
-}
-
-#pragma mark - 懒加载
-- (NSArray *)titleArray
-{
-    if (_titleArray == nil) {
-        _titleArray = [NSArray arrayWithObjects:@"全部", @"待付款", @"已付款", @"退款", nil];
-    }
-    return _titleArray;
 }
 
 @end
